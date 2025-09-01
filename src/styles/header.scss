@@ -14,7 +14,7 @@ html {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  width: 100%;
+  width: $header-w;
   margin: 0;
   grid-row: 1/2;
 
@@ -24,7 +24,7 @@ html {
 
 .nav__link {
   text-decoration: none;
-  color: #060b35;
+  color: $nav-color;
   text-transform: uppercase;
   line-height: 60px;
 }
@@ -41,7 +41,7 @@ html {
 .nav__item {
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  color: $nav-color;
   display: flex;
   align-items: center;
   margin: 0 10px;
@@ -73,7 +73,7 @@ html {
 .nav__item a.is-active::after {
   content: '';
   display: block;
-  width: 100%;
+  width: $header-w;
   height: 4px;
   background-color: var(--primary-color);
   position: absolute;

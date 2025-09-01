@@ -1,12 +1,11 @@
-[data-qa='card'] {
-  box-sizing: border-box;
-  width: 200px;
-  height: 408px;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
-}
-
 .card {
+  box-sizing: border-box;
+  width: $card-width;
+  height: 408px;
+  border: 1px solid $surface;
+  border-radius: $radius-5;
+  transition: transform $t-300;
+
   &__img {
     display: block;
     width: 160px;
@@ -18,16 +17,17 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 18px;
-    letter-spacing: 0%;
+    letter-spacing: $letter-space;
     margin: 0 16px;
     color: $txt-color;
+    transition: transform $t-300;
   }
 
   &__product-code-item {
     font-size: 10px;
     line-height: 14px;
-    letter-spacing: 0%;
-    color: #616070;
+    letter-spacing: $letter-space;
+    color: $muted;
     font-weight: $font-medium;
     margin: 4px 16px;
   }
@@ -41,7 +41,7 @@
     margin: 0;
     font-size: 10px;
     line-height: 14px;
-    letter-spacing: 0%;
+    letter-spacing: $letter-space;
     color: $txt-color;
     font-weight: $font-medium;
   }
@@ -57,8 +57,8 @@
   &__item {
     font-size: 12px;
     line-height: 18px;
-    letter-spacing: 0%;
-    color: #616070;
+    letter-spacing: $letter-space;
+    color: $muted;
     font-weight: $font-medium;
     margin: 0;
   }
@@ -67,7 +67,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    letter-spacing: 0%;
+    letter-spacing: $letter-space;
     color: $txt-color;
     margin: 0;
   }
@@ -90,24 +90,32 @@
     width: 166px;
     height: 40px;
     background-color: $color-buttom;
-    border-radius: 5px;
+    border-radius: $radius-5;
     border: 1px solid $color-buttom;
     margin: 16px;
 
     font-size: 14px;
     line-height: 16px;
-    letter-spacing: 0%;
+    letter-spacing: $letter-space;
     text-decoration: none;
     color: $background-color;
-  }
-}
 
-.card:hover {
-  color: #34568b;
-  transform: scale(1.2);
+    transition:
+      background-color $t-300,
+      color $t-300;
+  }
 }
 
 [data-qa='card-hover']:hover {
   background-color: $background-color;
   color: $color-buttom;
+}
+
+[data-qa='card']:hover .card__product {
+  color: $title-color;
+  transform: scale(1.2);
+}
+
+[data-qa='card']:hover {
+  transform: scale(1.2);
 }
