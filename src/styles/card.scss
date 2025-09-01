@@ -111,9 +111,8 @@
   color: $color-buttom;
 }
 
-[data-qa='card']:hover .card__product {
+.card:hover .card__product {
   color: $title-color;
-  transform: scale(1.2);
 }
 
 [data-qa='card']:hover {

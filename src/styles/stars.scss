@@ -14,7 +14,7 @@
     background-size: auto;
   }
 
-  &--N .stars__star:nth-child(-n + 4) {
+  &--4 .stars__star:nth-child(-n + 4) {
     background-image: url(../images/star-active.svg);
   }
 }
